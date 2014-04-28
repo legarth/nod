@@ -55,9 +55,9 @@ class SendSMS
  * Example of use
  * Remember to change the username and password!
  */
-
+/*
 $sms = new SendSMS();
 if($sms->send("hello this is a test from PHP ",'+447507295797',"Nod")) echo "Yay, sent!";
 else echo "Boo, not sent";
-
+*/
 ?>
