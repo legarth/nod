@@ -1,12 +1,10 @@
 <?php
 
 $number = $_GET["number"];
-$message = $_GET["message"];
+$explodedmsg = explode(" ", $_GET["message"]);
 $network = $_GET["network"];
 
-echo "Number:" . $number;
-echo "Message:" . $message;
-echo "Network:" . $network;
+
 
 // Create connection
 $con=mysqli_connect("127.3.124.2","adminX8wp3r5","NSQp-43aGVXv","nod");
@@ -15,6 +13,17 @@ $con=mysqli_connect("127.3.124.2","adminX8wp3r5","NSQp-43aGVXv","nod");
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-
-
+else {
+    echo "getting user". $explodedmsg[1];
+    $user_result = mysqli_query($con,"SELECT * FROM users where username='. $explodedmsg[1] .'");
+    
+    var_dump($user_result);
+    
+    
+}
+/*
+mysqli_query($con,"INSERT INTO incoming (FirstName, LastName, Age)
+VALUES ('Peter', 'Griffin',35)");
+*/
+}
 ?>
