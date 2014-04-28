@@ -9,7 +9,7 @@ echo "Message:" . $message;
 echo "Network:" . $network;
 
 // Create connection
-$con=mysqli_connect("127.3.124.2","adminX8wp3r5","abc123","NSQp-43aGVXv");
+$con=mysqli_connect("127.3.124.2","adminX8wp3r5","NSQp-43aGVXv","nod");
 
 // Check connection
 if (mysqli_connect_errno()) {
