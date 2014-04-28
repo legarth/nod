@@ -24,6 +24,7 @@ else {
 /*
 mysqli_query($con,"INSERT INTO incoming (FirstName, LastName, Age)
 VALUES ('Peter', 'Griffin',35)");
-*/
+
 }
+*/
 ?>
