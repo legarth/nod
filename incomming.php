@@ -7,4 +7,14 @@ $network = $_GET["network"];
 echo "Number:" . $number;
 echo "Message:" . $message;
 echo "Network:" . $network;
+
+// Create connection
+$con=mysqli_connect("127.3.124.2","adminX8wp3r5","abc123","NSQp-43aGVXv");
+
+// Check connection
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+
 ?>
