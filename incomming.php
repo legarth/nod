@@ -15,7 +15,7 @@ if (mysqli_connect_errno()) {
 }
 else {
     echo "getting user". $explodedmsg[1];
-    $user_result = mysqli_query($con,"SELECT * FROM users where username='. $explodedmsg[1] .'");
+    $user_result = mysqli_query($con,"SELECT * FROM users where username='". $explodedmsg[1] ."'");
     
     var_dump($user_result);
     
