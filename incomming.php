@@ -57,7 +57,7 @@ if($allgood)
             */
             echo "Saving message to DB<p>";
             
-            $insertstr = "INSERT INTO incoming (user, message, from, network) VALUES ('".
+            $insertstr = "INSERT INTO incoming (user, message, sender, network) VALUES ('".
                                                                                             $user_result['username']."', '".
                                                                                             $message."','".
                                                                                             $number."','".
