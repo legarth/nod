@@ -71,7 +71,7 @@ if($allgood)
                 echo "inserting";
                 $insertresult = mysqli_query($con, $insertstr);
                 
-                echo $insertresult ."<p>";
+                echo "Result: ".$insertresult ."<p>";
             }
         }
      
