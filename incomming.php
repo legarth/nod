@@ -61,8 +61,7 @@ if($allgood)
                                                                                             $user_result['username']."', '".
                                                                                             $message."','".
                                                                                             $number."','".
-                                                                                            $network."','".
-                                                                                            "')";
+                                                                                            $network."')";
             echo $insertstr ."<p>";
             
             $insertresult = mysqli_query($con, $insertstr);
