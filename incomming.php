@@ -57,12 +57,18 @@ if($allgood)
             */
             echo "Saving message to DB<p>";
             
-            mysqli_query($con,"INSERT INTO incoming (user, message, from, network) VALUES ('".
+            $insertstr = "INSERT INTO incoming (user, message, from, network) VALUES ('".
                                                                                             $user_result['username']."', '".
                                                                                             $message."','".
                                                                                             $number."','".
                                                                                             $network."','".
-                                                                                            "')");
+                                                                                            "')";
+            echo $insertstr ."<p>";
+            
+            $insertresult = mysqli_query($con, $insertstr);
+            
+            echo $insertresult ."<p>";
+            
         }
      
         
