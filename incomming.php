@@ -19,7 +19,10 @@ else
     
 if(count($explodedmsg) < 2)
     $allgood = 0;
-    
+    else
+{    
+    $message = implode(" ",array_slice($explodedmsg, 2));
+}    
 
 
 if($allgood)
@@ -45,13 +48,21 @@ if($allgood)
         else
         {
              $user_result  = mysqli_fetch_array($user_result);
-             
+             /*
              echo $user_result['id'] ."<p>";
              echo $user_result['username'] ."<p>";
              echo $user_result['name'] ."<p>";
              echo $user_result['number'] ."<p>";
              echo $user_result['branch'] ."<p>";
-
+            */
+            echo "Saving message to DB<p>";
+            
+            mysqli_query($con,"INSERT INTO incoming (user, message, from, network) VALUES ('".
+                                                                                            $user_result['username']."', '".
+                                                                                            $message."','".
+                                                                                            $number."','".
+                                                                                            $network."','".
+                                                                                            "')");
         }
      
         
