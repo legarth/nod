@@ -1,34 +1,72 @@
 <?php
 
-$number = $_GET["number"];
-$explodedmsg = explode(" ", $_GET["message"]);
-$network = $_GET["network"];
+$allgood = 1;
 
-echo "length of array ". count($explodedmsg) ."<p>";
+if (!empty($_GET['number']))
+    $number = $_GET["number"];
+else
+    $allgood = 0;
 
-if(count($explodedmsg) < 1)
-    echo "No Message.";
+if (!empty($_GET['message']))
+    $explodedmsg = explode(" ", $_GET["message"]);
+else
+    $allgood = 0;
+
+if (!empty($_GET['network']))
+    $network = $_GET["network"];
+else
+    $allgood = 0;
+    
+if(count($explodedmsg) < 2)
+    $allgood = 0;
     
 
-// Create connection
-$con=mysqli_connect("127.3.124.2","adminX8wp3r5","NSQp-43aGVXv","nod");
 
-// Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-else {
-    echo "getting user". $explodedmsg[1];
-    $user_result = mysqli_query($con,"SELECT * FROM users where username='". $explodedmsg[1] ."'");
+if($allgood)
+{
+    // Create connection
+    $con=mysqli_connect("127.3.124.2","adminX8wp3r5","NSQp-43aGVXv","nod");
     
-    var_dump($user_result);
-    
-    
-}
-/*
-mysqli_query($con,"INSERT INTO incoming (FirstName, LastName, Age)
-VALUES ('Peter', 'Griffin',35)");
+    // Check connection
+    if (mysqli_connect_errno()) {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error() . "<p>";
+    }
+    else 
+    {
+        echo "getting user". $explodedmsg[1] . "<p>";
+        $user_result = mysqli_query($con,"SELECT * FROM users where username='". $explodedmsg[1] ."'");
+        
+        if(!$user_result)
+            echo "Database error<p>";
+        else if(!mysql_num_rows($user_result))
+            echo "User not found<p>";
+        else
+        {
+             $user_result  = mysql_fetch_array($user_result);
+             
+             echo $user_result['id'] ."<p>";
+             echo $user_result['username'] ."<p>";
+             echo $user_result['name'] ."<p>";
+             echo $user_result['number'] ."<p>";
+             echo $user_result['branch'] ."<p>";
 
-}
-*/
+        }
+     
+        
+        
+    }
+    /*
+    mysqli_query($con,"INSERT INTO incoming (FirstName, LastName, Age)
+    VALUES ('Peter', 'Griffin',35)");
+    
+    }
+    */
+
+}  
+else
+{
+    echo "Incorrect data.";
+}  
+
+
 ?>
