@@ -6,6 +6,10 @@ $network = $_GET["network"];
 
 
 
+if(count($explodedmsg) < 1)
+    echo "No Message.";
+    
+
 // Create connection
 $con=mysqli_connect("127.3.124.2","adminX8wp3r5","NSQp-43aGVXv","nod");
 
