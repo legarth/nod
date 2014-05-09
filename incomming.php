@@ -34,15 +34,17 @@ if($allgood)
     else 
     {
         echo "getting user". $explodedmsg[1] . "<p>";
+        
         $user_result = mysqli_query($con,"SELECT * FROM users where username='". $explodedmsg[1] ."'");
-        echo "rows ". mysql_num_rows($user_result);
+        
+        echo "rows ". mysqli_num_rows($user_result);
         if(!$user_result)
             echo "Database error<p>";
-        else if(!mysql_num_rows($user_result))
+        else if(!mysqli_num_rows($user_result))
             echo "User not found<p>";
         else
         {
-             $user_result  = mysql_fetch_array($user_result);
+             $user_result  = mysqli_fetch_array($user_result);
              
              echo $user_result['id'] ."<p>";
              echo $user_result['username'] ."<p>";
