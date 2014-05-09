@@ -4,7 +4,7 @@ $number = $_GET["number"];
 $explodedmsg = explode(" ", $_GET["message"]);
 $network = $_GET["network"];
 
-
+echo "length of array ". count($explodedmsg) ."<p>";
 
 if(count($explodedmsg) < 1)
     echo "No Message.";
