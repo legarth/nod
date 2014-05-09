@@ -71,8 +71,15 @@ if($allgood)
                 echo "inserting";
                 $insertresult = mysqli_query($con, $insertstr);
                 
-                var_dump($insertresult);
-                //echo "Result: ".$insertresult ."<p>";
+                if(!$insertresult)
+                {
+                   // echo "Error";
+                    die('Error: ' . mysqli_error($con));
+                }
+                else
+                {
+                    echo "Insert done";
+                }
             }
         }
      
