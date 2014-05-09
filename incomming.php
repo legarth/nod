@@ -35,7 +35,7 @@ if($allgood)
     {
         echo "getting user". $explodedmsg[1] . "<p>";
         $user_result = mysqli_query($con,"SELECT * FROM users where username='". $explodedmsg[1] ."'");
-        
+        echo "rows ". mysql_num_rows($user_result);
         if(!$user_result)
             echo "Database error<p>";
         else if(!mysql_num_rows($user_result))
