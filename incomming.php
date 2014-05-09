@@ -57,17 +57,21 @@ if($allgood)
             */
             echo "Saving message to DB<p>";
             
-            $insertstr = "INSERT INTO incoming (user, message, from, network) VALUES ('".
+            $insertstr = "INSERT INTO incoming ('user', 'message', 'from', 'network') VALUES ('".
                                                                                             $user_result['username']."', '".
                                                                                             $message."','".
                                                                                             $number."','".
                                                                                             $network."')";
             echo $insertstr ."<p>";
-            
-            $insertresult = mysqli_query($con, $insertstr);
-            
-            echo $insertresult ."<p>";
-            
+            if (mysqli_connect_errno()) {
+              echo "Failed to connect to MySQL: " . mysqli_connect_error() . "<p>";
+            }
+            else
+            {
+                $insertresult = mysqli_query($con, $insertstr);
+                
+                echo $insertresult ."<p>";
+            }
         }
      
         
