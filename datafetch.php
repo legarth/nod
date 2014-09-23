@@ -17,7 +17,7 @@
     {
         $rank_result = mysqli_query($con,$branchranking);
          
-         echo "rowsDAAA ". mysqli_num_rows($rank_result);
+         //echo "rowsDAAA ". mysqli_num_rows($rank_result);
          
 
          
