@@ -43,9 +43,9 @@ Whitestuff Nod report
 
 <table style id="data" class="noddata">
 <!--tr><td>WhitestuffOne</td><td>3</td></tr><tr><td>WhtestuffTwo</td><td>1</td></tr-->
-
-</table>
 <?php foo();?>
+</table>
+
 </p>
 
 </body>
