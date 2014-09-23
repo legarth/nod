@@ -27,11 +27,12 @@
             echo "No resultsot found<p>";
         else
         {
+            echo '<table style= "width:100%">"';
             
             while ($row = mysqli_fetch_assoc($rank_result)) {
-                echo $row['name'];
-                echo $row['nods'];
+                  echo "<tr><td>". $row['name']. "</td><td>". $row['nods'] ."</td></tr>";
             }
+            echo "</table>";
             
         }  
     }   
