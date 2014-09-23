@@ -14,9 +14,19 @@ INNER JOIN business bu on bu.id = br.businessid WHERE bu.id = 1 GROUP BY u.branc
     }
     else 
     {
+        echo "fetching";
         $rank_result = mysqli_query($con,$branchranking);
          
          echo "rowsDAAA ". mysqli_num_rows($rank_result);
+         
+         if(!$rank_result)
+            echo "Database error<p>";
+        else if(!mysqli_num_rows($rank_result))
+            echo "No resultsot found<p>";
+        else
+        {
+            
+        }  
     }   
   }
 ?>
