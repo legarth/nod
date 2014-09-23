@@ -41,7 +41,7 @@
 Whitestuff Nod report
 </h1>
 
-<table style= id="data" class="noddata">
+<table style id="data" class="noddata">
 <!--tr><td>WhitestuffOne</td><td>3</td></tr><tr><td>WhtestuffTwo</td><td>1</td></tr-->
 
 </table>
