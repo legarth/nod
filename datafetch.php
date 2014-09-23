@@ -19,6 +19,13 @@ INNER JOIN business bu on bu.id = br.businessid WHERE bu.id = 1 GROUP BY u.branc
          
          echo "rowsDAAA ". mysqli_num_rows($rank_result);
          
+            if(!$rank_result)
+            {
+               // echo "Error";
+                die('Error: ' . mysqli_error($con));
+            }
+         
+         
          if(!$rank_result)
             echo "Database error<p>";
         else if(!mysqli_num_rows($rank_result))
