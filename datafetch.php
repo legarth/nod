@@ -15,17 +15,11 @@
     }
     else 
     {
-        echo "fetching";
         $rank_result = mysqli_query($con,$branchranking);
          
          echo "rowsDAAA ". mysqli_num_rows($rank_result);
          
-            if(!$rank_result)
-            {
-               // echo "Error";
-                die('Error: ' . mysqli_error($con));
-            }
-         
+
          
          if(!$rank_result)
             echo "Database error<p>";
