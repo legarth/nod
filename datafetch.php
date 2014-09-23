@@ -16,7 +16,7 @@ INNER JOIN business bu on bu.id = br.businessid WHERE bu.id = 1 GROUP BY u.branc
     {
         $rank_result = mysqli_query($con,$branchranking);
          
-         echo "rows ". mysqli_num_rows($rank_result);
+         echo "rowsDAAA ". mysqli_num_rows($rank_result);
     }   
   }
 ?>
