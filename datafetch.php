@@ -1,8 +1,7 @@
 <?php
 
     //quries
-    $branchranking ="SELECT br.name, COUNT(*) as nods FROM incoming i INNER JOIN users u on i.user = u.username INNER JOIN branch br on u.branch = br.id
-INNER JOIN business bu on bu.id = br.businessid WHERE bu.id = 1 GROUP BY u.branch ORDER BY COUNT(*) DESC";
+    $branchranking ="SELECT br.name, COUNT(*) as nods FROM incoming i INNER JOIN users u on i.user = u.username INNER JOIN branch br on u.branch = br.id INNER JOIN business bu on bu.id = br.businessid WHERE bu.id = 1 GROUP BY u.branch ORDER BY COUNT(*) DESC";
   function foo()
   {
       
@@ -15,7 +14,7 @@ INNER JOIN business bu on bu.id = br.businessid WHERE bu.id = 1 GROUP BY u.branc
     else 
     {
         echo "fetching";
-        $rank_result = mysqli_query($con,"select * from users");
+        $rank_result = mysqli_query($con,$branchranking);
          
          echo "rowsDAAA ". mysqli_num_rows($rank_result);
          
