@@ -28,6 +28,11 @@
         else
         {
             
+            while ($row = mysqli_fetch_assoc($rank_result)) {
+                echo $row['name'];
+                echo $row['nods'];
+            }
+            
         }  
     }   
   }
