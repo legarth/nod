@@ -38,11 +38,11 @@
 <img src="img/NodLogoCroppedNoLine.png" class="nodlogo">
 
 <h1 id="header" class="nodheader">
-Carphone Warehouse
+Carphone Warehouse Kings Road
 </h1>
 
 <table style id="data" class="noddata">
-<?php getBranchRank();?>
+<?php getNodRankForBranch();?>
 </table>
 
 
