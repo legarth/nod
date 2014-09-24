@@ -6,7 +6,14 @@
 
   h1   {color:white}
   p    {color:white}
-  table    {color:white}
+  table,td    {color:white}
+table {
+    border-collapse: collapse;
+}
+
+table, th {
+    border: 1px solid white;
+}
   body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    font-weight: 300; background-color:#a71681;
@@ -42,6 +49,7 @@ Carphone Warehouse
 </h1>
 
 <table style id="data" class="noddata">
+<tr><th>Branch</th><th>Nods</th></tr>
 <?php getBranchRank();?>
 </table>
 

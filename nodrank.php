@@ -38,7 +38,7 @@
 <img src="img/NodLogoCroppedNoLine.png" class="nodlogo">
 
 <h1 id="header" class="nodheader">
-Carphone Warehouse Kings Road
+Kings Road
 </h1>
 
 <table style id="data" class="noddata">
