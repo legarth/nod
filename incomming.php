@@ -5,6 +5,7 @@ class SendSMS
 	private $username = '9qqkd'; // CHANGE THIS!!!
 	private $password = 'azr90'; // CHANGE THIS!!
 	private $message_id,$credits_used;
+	
 	function __construct()
 	{
 	}
