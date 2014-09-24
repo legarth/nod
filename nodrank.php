@@ -42,7 +42,7 @@ Carphone Warehouse Kings Road
 </h1>
 
 <table style id="data" class="noddata">
-<?php getNodRankForBranch();?>
+<?php getNodRankForBranch(1);?>
 </table>
 
 
