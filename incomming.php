@@ -156,7 +156,7 @@ if($allgood)
                 
                 echo "Sending confirmation";
                 
-                $smsconfirmtext = "Brilliant thanks for your nod. It's great to know I was able to help, from ".$user_result['name'].". White Stuff also have a simple questionnaire. We'd love to hear your thoughts and you'll get a £5 voucher off your next shop with us. Follow the link: http://bit.ly/1DVZyqH";
+                $smsconfirmtext = "Brilliant thanks for your nod. It's great to know I was able to help, from ".$user_result['name'].". White Stuff also have a simple questionnaire. We'd love to hear your thoughts and you'll get a \\£5 voucher off your next shop with us. Follow the link: http://bit.ly/1DVZyqH";
                 
                 $confirmnumber = "+".$number;
                 
