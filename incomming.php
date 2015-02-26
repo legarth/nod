@@ -149,7 +149,7 @@ if($allgood)
                 echo $user_result['number']."<p>";
                
                 $sms = new SendSMS();
-                //if($sms->send($smstext,"'".$user_result['number']."'","nod")) echo "Yay, sent!"; else echo "Boo, not sent"; 
+                if($sms->send($smstext,"'".$user_result['number']."'","nod")) echo "Yay, sent!"; else echo "Boo, not sent"; 
                 
               
                 
