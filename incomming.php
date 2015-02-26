@@ -140,7 +140,7 @@ if($allgood)
             {
                 echo "Insert done, now send to reciever<p>";
                 
-                $smstext = "Hi ".$user_result['name']." you have just recived a nod from someone. They said '".$message."'";
+                $smstext = "Hi ".$user_result['name']." someone just gave you a nod! They said: '".$message."'";
                 
                 
                 echo "Sending: <p>";
@@ -149,7 +149,24 @@ if($allgood)
                 echo $user_result['number']."<p>";
                
                 $sms = new SendSMS();
-                if($sms->send($smstext,"'".$user_result['number']."'","Nod")) echo "Yay, sent!"; else echo "Boo, not sent"; 
+                if($sms->send($smstext,"'".$user_result['number']."'","nod")) echo "Yay, sent!"; else echo "Boo, not sent"; 
+                
+              
+                
+                
+                echo "Sending confirmation";
+                
+                $smsconfirmtext = "Brilliant, thanks for your nod. It's great to know I was able to help, from ".$user_result['name'].". White Stuff also have a simple questionnaire. We’d love to hear your thoughts and you’ll get a £5 voucher off your next shop with us. Follow the link: http://bit.ly/1DVZyqH";
+                
+                $confirmnumber = "+".$number;
+                
+                echo "Sending: <p>";
+                echo $smsconfirmtext."<p>";
+                echo "To: <p>";
+                echo $confirmnumber."<p>";
+               
+                $confirmsms = new SendSMS();
+                if($confirmsms->send($smsconfirmtext,"'".$confirmnumber."'","nod")) echo "Yay, confirm sent!"; else echo "Boo, confirm not sent";                 
                 
             }
 
