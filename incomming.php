@@ -56,18 +56,27 @@ $allgood = 1;
 if (!empty($_GET['number']))
     $number = $_GET["number"];
 else
+{ 
+    echo "No number";
     $allgood = 0;
+}
 
 if (!empty($_GET['message']))
     $explodedmsg = explode(" ", $_GET["message"]);
 else
+{ 
+    echo "No message";
     $allgood = 0;
+}
 
 if (!empty($_GET['network']))
     $network = $_GET["network"];
 else
+{
+    echo "No network";
     $allgood = 0;
-    
+}
+
 if(count($explodedmsg) < 2)
     $allgood = 0;
     else
