@@ -155,7 +155,7 @@ if($allgood)
 }  
 else
 {
-    echo "Incorrect data.";
+    echo "Incorrect data. You suck";
 }  
 
 
