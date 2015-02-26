@@ -78,7 +78,11 @@ else
 }
 
 if(count($explodedmsg) < 2)
+{
+    echo "Message short";
     $allgood = 0;
+} 
+    
     else
 {    
     $message = implode(" ",array_slice($explodedmsg, 2));
